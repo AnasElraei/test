@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Competition</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+    <!-- Registration Form Section -->
+    <section id="login-section">
+        <h2>Register for Competition</h2>
+        <form id="register-form" method="POST" action="register.php">
+            <label for="team-name">Team Name (Leave blank for individual):</label>
+            <input type="text" id="team-name" name="team_name">
+            
+            <label for="member-count">Number of Members (Only for teams, max 4):</label>
+            <input type="number" id="member-count" name="member_count" min="1" max="4">
+            
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz-section" style="display:none;">
+        <h2>Sports Quiz</h2>
+        <form id="quiz-form" method="POST" action="quiz.php">
+            <div>
+                <label>Question 1: How many players are there in a soccer team?</label><br>
+                <input type="radio" name="q1" value="11"> 11<br>
+                <input type="radio" name="q1" value="10"> 10<br>
+            </div>
+            <div>
+                <label>Question 2: Who has won the most Olympic gold medals?</label><br>
+                <input type="radio" name="q2" value="Michael Phelps"> Michael Phelps<br>
+                <input type="radio" name="q2" value="Usain Bolt"> Usain Bolt<br>
+            </div>
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </section>
+
+    <!-- Scoreboard Section -->
+    <section id="scoreboard-section" style="display:none;">
+        <h2>Scoreboard</h2>
+        <ul id="scoreboard-list">
+            <!-- Scoreboard will be populated here -->
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
